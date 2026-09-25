@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survei Kepuasan Mahasiswa Politeknik Elektronika Negeri Surabaya</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f4f7;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #2563eb;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        h1 {
+            font-family: "Trebuchet MS", sans-serif;
+        }
+        
+        header p {
+            font-family: "Trebuchet MS", sans-serif;
+            font-size: 18px;
+        }
+
+        main {
+            max-width: 600px;
+            margin: 30px auto;
+            background-color: white;
+            padding: 25px;
+            border-radius: 10px;
+        }
+
+        fieldset {
+            margin-bottom: 20px;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+        }
+
+        legend {
+            font-weight: bold;
+            color: #2563eb;
+            text-align: center;
+            padding:0 10px;
+        }
+
+        label {
+            display: block;
+            margin-top: 12px;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        input,
+        select,
+        textarea {
+            width: 100%;
+            padding: 10px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+    .radio {
+    width: auto;
+    margin-bottom: 10px;
+    }
+
+    .radio-label {
+    display: block;
+    margin-top: 12px;
+    margin-bottom: 5px;
+    font-weight: bold;
+    }
+        .checkbox {
+            width: auto;
+            margin-right: 5px;
+        }
+
+        button {
+            background-color: #2563eb;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #1d4ed8;
+        }
+
+        footer {
+            text-align: center;
+            padding: 15px;
+            color: #555;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Survei Kepuasan Mahasiswa Politeknik Elektronika Negeri Surabaya</h1>
+        <p>Berikan penilaian terhadap layanan kampus</p>
+    </header>
+
+    <main>
+        <form>
+
+            <!-- Fieldset 1 -->
+            <fieldset>
+                <legend>Data Mahasiswa</legend>
+
+                <label for="nama">Nama</label>
+                <input type="text" id="nama" name="nama" required>
+
+                <label for="NRP">NRP</label>
+                <input type="text" id="NRP" name="NRP"
+                required minlength="8"
+                pattern="[0-9]{8,}"
+                inputmode="numeric">
+
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="fakultas">Fakultas</label>
+                <select id="fakultas" name="fakultas" required>
+                    <option value="">-- Pilih Fakultas --</option>
+                    <option value="teknik">Teknik Elektro</option>
+                    <option value="ekonomi">Teknik Informatika dan Komputer</option>
+                    <option value="hukum">Teknologi Multimedia Kreatif</option>
+                    <option value="kesehatan">Teknik Mekanika dan Energi</option>
+                </select>
+
+                <label for="semester">Semester Saat Ini</label>
+                <input type="number" id="semester" name="semester"
+                       min="1" max="8">
+            </fieldset>
+
+
+            <!-- Fieldset 2 -->
+          <fieldset>
+    <legend>Tingkat Kepuasan</legend>
+
+    <p>Seberapa puas Anda terhadap layanan kampus?</p>
+
+   <label class="radio-label" for="puas1">1 - Sangat Tidak Puas</label>
+    <input class="radio" type="radio" id="puas1" name="kepuasan" value="1" required>
+
+    <label class="radio-label" for="puas2">2 - Tidak Puas</label>
+    <input class="radio" type="radio" id="puas2" name="kepuasan" value="2">
+
+    <label class="radio-label" for="puas3">3 - Cukup</label>
+    <input class="radio" type="radio" id="puas3" name="kepuasan" value="3">
+
+    <label class="radio-label" for="puas4">4 - Puas</label>
+    <input class="radio" type="radio" id="puas4" name="kepuasan" value="4">
+
+    <label class="radio-label" for="puas5">5 - Sangat Puas</label>
+    <input class="radio" type="radio" id="puas5" name="kepuasan" value="5">
+            </fieldset>
+
+
+            <!-- Fieldset 3 -->
+            <fieldset>
+                <legend>Saran dan Kontak</legend>
+
+                <label for="saran">Saran/Keluhan</label>
+                <textarea id="saran" name="saran"
+                          rows="5"
+                          placeholder="Contoh: Pelayanan administrasi kampus sudah baik, tetapi waktu pelayanan dapat dipercepat."></textarea>
+
+                <br>
+
+                <input class="checkbox"
+                       type="checkbox"
+                       id="hubungi"
+                       name="hubungi">
+
+                <label for="hubungi">
+                    Setuju dihubungi terkait survei ini
+                </label>
+            </fieldset>
+
+            <button type="submit">Kirim Survei</button>
+
+        </form>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Survei Kepuasan Mahasiswa</p>
+    </footer>
+
+</body>
+</html>
